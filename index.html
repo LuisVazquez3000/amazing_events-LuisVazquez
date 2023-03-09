@@ -10,18 +10,17 @@
 		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<title>Amazing Events </title>
 </head>
-
 <body>
 	<header class="header-nav col d-flex">
 		<div class="logo">
 			<a href="./index.html"><img src="./assets/img/LogoAmazingEvents.png" alt="Logo"></a>
 		</div>
-		<nav class="navbar_header">
+		<nav class="navbar_header flex-md-row">
 			<a href="#">Home</a>
 			<a href="./upcoming.html">Upcoming Events</a>
 			<a href="./pastEvents.html">Past Events</a>
 			<a href="./contact.html">Contact</a>
-			<a href="./details.html">Details</a>
+			<a href="./details.html?id=1">Details</a>
 			<a href="./stats.html">Stats</a>
 		</nav>
 	</header>
@@ -49,22 +48,13 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="ul_nav">
-						<!-- <li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Link</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">Dropdown</a>	
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">Disabled</a>
-						</li> -->
+						<!--aca van los checkbox-->
 					</ul>
-					<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
+					<form class="d-flex justify-content-center align-items-baseline gap-4" role="search">
+						<label class="form-label">Search	
+						</label>
+							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+						<!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
 					</form>
 				</div>
 			</div>
@@ -72,6 +62,7 @@
 		<!-- fin agregado checkbox -->
 	<main class="principal">
 		<div id="container-cards">
+			<!--aca van las cards-->
 		</div>
 	</main>
 	<footer id="fooIndex" class="col d-flex justify-content-center mb-4 p-5 mt-5">

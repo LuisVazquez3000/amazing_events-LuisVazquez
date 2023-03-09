@@ -42,7 +42,7 @@ header {
 
 main {
 	display: flex;
-	height: 68vh;
+	height: 85vh;
 	justify-content: center;
 }
 
@@ -57,6 +57,7 @@ main {
 
 .container_detail {
 	display: flex;
+	justify-content: space-evenly;
 	width: 90%;
 	height: 400px;
 	padding: 2em;
@@ -72,7 +73,7 @@ main {
 }
 
 .img_detail img {
-	width: 400px;
+	width: 25em;
 }
 
 .txt_detail {
@@ -221,9 +222,6 @@ footer {
 	height: 40vh;
 }
 
-/* input {
-	visibility: hidden;
-} */
 
 @media screen and (max-width:576px) {
 	.header-nav {
@@ -366,4 +364,9 @@ footer {
 		position: absolute;
 		top: 145em;
 	}
+}
+
+
+.filtro{
+	display: none;
 }
