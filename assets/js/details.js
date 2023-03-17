@@ -56,13 +56,17 @@ function createCard(object)
 	const p2 = createElement("p",false,false,false,false,`Place: ${object.place}`)
 	const p3 = createElement("p",false,false,false,false,`Price:$${object.price}`)
 	const p4 = createElement("p",false,false,false,false,`Category:${object.category}`)
-	
+	const p5 = createElement("p",false,false,false,false,`Capacity:${object.capacity }`)
+	const p6 = createElement("p",false,false,false,false,`${object.assistance == undefined?"Estimate":"Assistance"}:${object.assistance == undefined?object.estimate:object.assistance}`)
+
 	cont_img.appendChild(el);
 	cont_txt.appendChild(h3);
 	cont_txt.appendChild(p1);
 	cont_txt.appendChild(p2);
 	cont_txt.appendChild(p3);
 	cont_txt.appendChild(p4);
+	cont_txt.appendChild(p5);
+	cont_txt.appendChild(p6);
 	
 }
 

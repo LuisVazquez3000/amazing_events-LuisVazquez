@@ -13,7 +13,27 @@ header {
 	min-height: 10vh;
 	font-size: large;
 }
+.check_nav{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
+@media screen and (max-width:580px) {
+	.check_nav{
+		flex-direction: column;
+	}
+	#fooIndex{
+		display: none;
+	}
+	
+}
+.nav-item{
+}
+
+.nav-item:hover{
+	background-color: #FFF000;
+}
 .navbar_header {
 	display: flex;
 	align-items: center;
@@ -265,8 +285,7 @@ footer {
 		top: 360em;
 	}
 
-	footer {
-		width: 100%;
+	footer{
 		display: none;
 	}
 
