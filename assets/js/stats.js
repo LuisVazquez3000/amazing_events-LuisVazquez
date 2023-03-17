@@ -30,8 +30,8 @@ fetch(url)
 		const eventos = data.events;
 		console.log(eventos[0]);
 		loadHtml(eventos, container1);
-		calcularGanancias(eventos.filter(elem => elem.assistance), "Food")
-		calcularGanancias(eventos.filter(elem => elem.estimate), "Food")
+		// calcularGanancias(eventos.filter(elem => elem.assistance), "Food")
+		// calcularGanancias(eventos.filter(elem => elem.estimate), "Food")
 		
 		addTable(eventos.filter(el => el.estimate), container2)
 		addTable(eventos.filter(el => el.assistance), container3)
@@ -93,8 +93,8 @@ function addTable(array, html)
 	for (const category of categories) {
 		let tr = createElement('tr', false, false, false, false, false, false, false);
 		tr.innerHTML = `<td>${category}</td>
-		<td>${calcularGanancias(array,category)}</td>
-		<td>${calcularAsistencia(array,category)}</td>
+		<td>$${calcularGanancias(array,category)}</td>
+		<td>${calcularAsistencia(array,category)}%</td>
 		`
 		fragment.appendChild(tr);
 	}

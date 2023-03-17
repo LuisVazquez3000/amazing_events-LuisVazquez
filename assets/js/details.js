@@ -1,11 +1,27 @@
-const queryString =location.search;
-const params = new URLSearchParams(queryString);
+const url = `https://mindhub-xj03.onrender.com/api/amazing`;
 const container_details = document.querySelector("#details");
 const cont_img = document.getElementById("container_img");
 const cont_txt = document.querySelector("#txt_detail")
-const id = params.get("id");
-const datos_eventos = data.events;
-const datoEvento = datos_eventos.find(e =>e._id == id);
+//const datos_eventos = data.events;
+
+async function load(){
+	const queryString =location.search;
+	const params = new URLSearchParams(queryString);
+	const id = params.get("id") || 1;
+	let resp = await fetch(url);
+	let data = await resp.json();
+	let evento = data.events;
+	const datoEvento = evento.find(e =>e._id == id);
+	
+	console.log(datoEvento);
+	
+	createCard(datoEvento)
+}
+
+load();
+
+
+
 
 function createElement(html,id,className, href,src, content ) {
 	const elm = document.createElement(html);
@@ -31,20 +47,24 @@ function createElement(html,id,className, href,src, content ) {
 }
 
 
-const el = createElement("img",false,"img_detail",false,`${datoEvento.image}`, false);
-const h3 = createElement("h3",false,false,false,false,`${datoEvento.name}`);
-const p1 = createElement("p",false,false,false,false,`${datoEvento.description}`)
-const p2 = createElement("p",false,false,false,false,`${datoEvento.place}`)
-const p3 = createElement("p",false,false,false,false,`${datoEvento.price}`)
-const p4 = createElement("p",false,false,false,false,`${datoEvento.category}`)
+function createCard(object)
+{
 
-cont_img.appendChild(el);
-cont_txt.appendChild(h3);
-cont_txt.appendChild(p1);
-cont_txt.appendChild(p2);
-cont_txt.appendChild(p3);
-cont_txt.appendChild(p4);
-
+	const el = createElement("img",false,"img_detail",false,`${object.image}`, false);
+	const h3 = createElement("h3",false,false,false,false,`Titulo: ${object.name}`);
+	const p1 = createElement("p",false,false,false,false,`Desc:${object.description}`)
+	const p2 = createElement("p",false,false,false,false,`Place: ${object.place}`)
+	const p3 = createElement("p",false,false,false,false,`Price:$${object.price}`)
+	const p4 = createElement("p",false,false,false,false,`Category:${object.category}`)
+	
+	cont_img.appendChild(el);
+	cont_txt.appendChild(h3);
+	cont_txt.appendChild(p1);
+	cont_txt.appendChild(p2);
+	cont_txt.appendChild(p3);
+	cont_txt.appendChild(p4);
+	
+}
 
 
 
