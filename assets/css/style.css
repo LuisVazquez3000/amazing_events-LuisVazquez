@@ -173,6 +173,22 @@ footer {
 	margin-top: -30px;
 }
 
+#footer-contact{
+	position: relative;
+	top: 20rem;
+}
+.foo-details{
+	position: relative;
+	top: 10rem;
+}
+#fooPast{
+	position: relative;
+	top: 110rem;
+}
+#fooUpcoming{
+	position: relative;
+	top: 110rem;
+}
 .footStat {
 	width: 100%;
 	position: absolute;
@@ -306,9 +322,6 @@ footer {
 
 	footer {
 		display: none;
-		/* width: 100%;
-		position: absolute;
-		top: 210em; */
 	}
 
 	.container_detail {
@@ -331,8 +344,8 @@ footer {
 
 	.foo-details {
 		width: 100%;
-		position: absolute;
-		top: 120em;
+		position: relative;
+		top: 200em;
 	}
 
 	.footStat {
