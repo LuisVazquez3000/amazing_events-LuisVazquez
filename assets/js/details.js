@@ -7,7 +7,7 @@ const cont_txt = document.querySelector("#txt_detail")
 async function load(){
 	const queryString =location.search;
 	const params = new URLSearchParams(queryString);
-	const id = params.get("id") || 1;
+	const id = params.get("id") || 1	;
 	let resp = await fetch(url);
 	let data = await resp.json();
 	let evento = data.events;
@@ -19,8 +19,6 @@ async function load(){
 }
 
 load();
-
-
 
 
 function createElement(html,id,className, href,src, content ) {
@@ -51,7 +49,7 @@ function createCard(object)
 {
 
 	const el = createElement("img",false,"img_detail",false,`${object.image}`, false);
-	const h3 = createElement("h3",false,false,false,false,`Titulo: ${object.name}`);
+	const h3 = createElement("h3",false,false,false,false,`Title: ${object.name}`);
 	const p1 = createElement("p",false,false,false,false,`Desc:${object.description}`)
 	const p2 = createElement("p",false,false,false,false,`Place: ${object.place}`)
 	const p3 = createElement("p",false,false,false,false,`Price:$${object.price}`)
